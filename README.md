@@ -8,21 +8,21 @@ SomaticCaller is an innovative caller designed for the stable detection of varia
 
 The following packages and software need to be installed before running SomaticCaller.
 
-freebayes[https://github.com/freebayes/freebayes]
+[freebayes](https://github.com/freebayes/freebayes)
 
-lofreq[https://github.com/CSB5/lofreq]
+[lofreq](https://github.com/CSB5/lofreq)
 
-Mutect2[https://github.com/broadinstitute/gatk]
+[Mutect2](https://github.com/broadinstitute/gatk)
 
-sniper[https://gmt.genome.wustl.edu/packages/somatic-sniper/]
+[sniper](https://gmt.genome.wustl.edu/packages/somatic-sniper/)
 
-strelka2[https://github.com/Illumina/strelka]
+[strelka2](https://github.com/Illumina/strelka)
 
-VarDict[https://github.com/AstraZeneca-NGS/VarDictJava]
+[VarDict](https://github.com/AstraZeneca-NGS/VarDictJava)
 
-VarScan[https://github.com/dkoboldt/varscan]
+[VarScan](https://github.com/dkoboldt/varscan)
 
-h2o[https://github.com/h2oai/h2o-3]
+[h2o](https://github.com/h2oai/h2o-3)
 
 ## Usage
 
