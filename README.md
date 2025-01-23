@@ -247,16 +247,17 @@ Here is an example of running SomaticCaller on a Linux system:
 
 ```bash
 # Single Sample Mode:
-Rscript SingleSample.H2O.R
+Rscript SingleSample.H2O.R  --FeatureType=freebayes,lofreq,Mutect2,sniper,strelka2,VarDict,VarScan --FeatureFile=Feature/freebayes.csv,Feature/lofreq.csv,Feature/Mutect2.csv,Feature/sniper.csv,Feature/strelka2.csv,Feature/VarDict.csv,Feature/VarScan.csv --output=Results_TOO --list=InfoList/info.list --ratio=0.6 --seed=1 --nthreads=12 --memory=40G --addPCA=F --colnames=Detail_Group,Stage_TNM --sample_factors=1,1,1,1,1,1,1 
 
-Rscript SingleSample.predict.R
+Rscript SingleSample.predict.R --model=Results_TOO/h2o_seed1_model_list.Rdata --ResultDir=Predict --list=InfoList/info.list --FeatureType=freebayes,lofreq,Mutect2,sniper,strelka2,VarDict,VarScan --NewFile=Feature/freebayes.csv,Feature/lofreq.csv,Feature/Mutect2.csv,Feature/sniper.csv,Feature/strelka2.csv,Feature/VarDict.csv,Feature/VarScan.csv --addPCA=F --datatype=all --seed=1
+
 
 # Batch Sample Mode:
-Rscript BatchSample.H2O.R
+Rscript BatchSample.H2O.R --FeatureType=lofreq --FeatureFile=Feature/lofreq.csv --output=Results_freebayes_lofreq --list=InfoList/freebayes.info --ratio=0.6 --seed=7 --nthreads=10 --memory=30G --addPCA=F 
 
-Rscript BatchSample.predict.R
+Rscript  BatchSample.predict.R --model=Results_freebayes_lofreq/h2o_seed7_model_list.Rdata --ResultDir=Predict --FeatureType=lofreq --NewFile=Feature/lofreq.csv  --addPCA=F --datatype=freebayes --seed=7 --list=info.list 
 
-python SAOpt.py
+python SAOpt.py --input Predict/h2o_seed7_lofreq_Predict.csv --output h2o_seed7_lofreq_Predict_Opt.tsv --greedy-init -vv
 ```
 
 ## Output
