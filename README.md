@@ -34,6 +34,7 @@ VarScan
 
 #### Training
 
+```
 Usage: SingleSample.H2O.R [options]
     Training models based on different features.
 
@@ -79,9 +80,11 @@ Options:
 
         -h, --help
                 Show this help message and exit
+```
 
 #### Prediction
 
+```
 Usage: SingleSample.predict.R [options]
     Predict new data based on models.
 
@@ -121,11 +124,13 @@ Options:
 
         -h, --help
                 Show this help message and exit
+```
 
 ### Batch Sample Mode
 
 #### Training
 
+```
 Usage: BatchSample.H2O.R [options]
     Training models based on different features.
 
@@ -165,9 +170,11 @@ Options:
 
         -h, --help
                 Show this help message and exit
+```
 
 #### Prediction
 
+```
 Usage: BatchSample.predict.R [options]
     Predict new data based on models.
 
@@ -210,9 +217,11 @@ Options:
 
         -h, --help
                 Show this help message and exit
+```
 
 #### Optimization
 
+```
 usage: SAOpt.py [-h] -i INPUT [-o OUTPUT] [--init-temp [INIT_TEMP]] [--final-temp [FINAL_TEMP]] [--cooling-rate [COOLING_RATE]] [--rand-seed [RAND_SEED]]
           [--iterations [ITERATIONS]] [-g] [--greedy-init] [-v] [-vv]
 
@@ -236,21 +245,26 @@ optional arguments:
   --greedy-init         Use greedy strategy for initial solution.
   -v, --verbose         Get more information.
   -vv, --debug          Get detailed debug information.
+```
 
 ## Example
 
 -----------------------------------------------------------------
 Here is an example of running SomaticCaller on a Linux system:
 
+```bash
+# Single Sample Mode:
 Rscript SingleSample.H2O.R
 
 Rscript SingleSample.predict.R
 
+# Batch Sample Mode:
 Rscript BatchSample.H2O.R
 
 Rscript BatchSample.predict.R
 
 python SAOpt.py
+```
 
 ## Output
 
