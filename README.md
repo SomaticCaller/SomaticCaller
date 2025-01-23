@@ -1,15 +1,11 @@
 # User Guide of SomaticCaller
 
------------------------------------------------------------------
-
 ## Introduction
 
------------------------------------------------------------------
 SomaticCaller is an innovative caller designed for the stable detection of variants.
 
 ## Install
 
------------------------------------------------------------------
 The following packages and software need to be installed before running SomaticCaller.
 
 freebayes
@@ -27,8 +23,6 @@ VarDict
 VarScan
 
 ## Usage
-
------------------------------------------------------------------
 
 ### Single Sample Mode
 
@@ -249,7 +243,6 @@ optional arguments:
 
 ## Example
 
------------------------------------------------------------------
 Here is an example of running SomaticCaller on a Linux system:
 
 ```bash
@@ -268,25 +261,24 @@ python SAOpt.py
 
 ## Output
 
------------------------------------------------------------------
 The output of SomaticCaller is a VCF (Variant Call Format) file, specifically SomaticCaller.vcf, conforming to the VCFv4.2 standard. The VCF file format contains the following columns:
 
-CHROM: The chromosome number where the variant is located.
+- CHROM: The chromosome number where the variant is located.
 
-POS: The position of the variant on the chromosome.
+- POS: The position of the variant on the chromosome.
 
-ID: A unique identifier for the variant, if available.
+- ID: A unique identifier for the variant, if available.
 
-REF: The reference base(s) at the variant site.
+- REF: The reference base(s) at the variant site.
 
-ALT: The alternate base(s) observed at the variant site.
+- ALT: The alternate base(s) observed at the variant site.
 
-QUAL: Quality score of the variant call.
+- QUAL: Quality score of the variant call.
 
-FILTER: Filter status of the variant, indicating if it passes quality thresholds.
+- FILTER: Filter status of the variant, indicating if it passes quality thresholds.
 
-INFO: Additional information about the variant, such as allele frequency, depth of coverage, and other annotations.
+- INFO: Additional information about the variant, such as allele frequency, depth of coverage, and other annotations.
 
-FORMAT: Format of the data in the genotype fields.
+- FORMAT: Format of the data in the genotype fields.
 
-unknown: Sample-specific genotype information, detailing the genotype of the sample and additional metrics like genotype quality, depth, and allele count.
+- unknown: Sample-specific genotype information, detailing the genotype of the sample and additional metrics like genotype quality, depth, and allele count.
